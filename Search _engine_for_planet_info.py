@@ -1,4 +1,4 @@
-Solar_System = {
+solar_system = {
     "Merkury": {"Masa:" : "3,3011 x 10²³ kg", "Promień: " : "2 439,7 km", "Grawitacja: " : "3,7 m/s²", "Odległośc od Słońca: " : "57,9 mln km"},
     "Wenus": {"Masa:" : "4,8675 x 10²⁴ kg", "Promień: " : "6 051,8 km", "Grawitacja: " : "8,87 m/s²", "Odległość od Słońca: " : "108,2 mln km"},
     "Ziemia": {"Masa:" : "5,97237 x 10²⁴ kg", "Promień: " : "6 371 km", "Grawitacja: " : "9,81 m/s²", "Odległość od Słońca: " : "149,6 mln km"},
@@ -9,10 +9,15 @@ Solar_System = {
     "Neptun": {"Masa:" : "1,02413 x 10²⁶ kg", "Promień: " : "24 622 km", "Grawitacja: " : "11,15 m/s²", "Odległośc od Słońca: " : "4 498,3 mln km"}
 }
 
-def Planets():
-    planet = input("Wybierz planetę: ")
-    if planet in Solar_System:
-        for key, value in Solar_System[planet].items():
-            print(key, value)
+def planets():
+    while True:
+        planet = input("Wybierz planetę lub 0, żeby zakończyć program: ")
+        if planet == "0":
+            break
+        if planet in solar_system:
+            for key, value in solar_system[planet].items():
+                print(key, value)
+        else:
+            print("Nie ma takiej planety w układzie słonecznym")
 
-Planets()
+planets()
