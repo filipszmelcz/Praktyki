@@ -14,6 +14,9 @@ def planets():
         planet = input("Wybierz planetę lub 0, żeby zakończyć program: ")
         if planet == "0":
             break
+        if not planet:
+            print("Proszę podać nazwę planety.")
+            continue
         if planet in solar_system:
             for key, value in solar_system[planet].items():
                 print(key, value)
