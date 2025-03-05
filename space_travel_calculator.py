@@ -1,4 +1,5 @@
-from search_engine_for_planet_info import solar_system
+from planet_loader import load_planets
+solar_system = load_planets()
 
 transport = {
     "Prędkość światła" : 1079252849,
@@ -11,7 +12,7 @@ def calculator():
     dest = input("Podaj planetę docelową: ")
     trans = input("Podaj sposób transportu (Prędkość światła, Voyager 1, Falcon 9): ")
     v = transport.get(trans)
-    s = abs(int(solar_system.get(dest).get("Odległośc od Słońca(km): ")) - int(solar_system.get(start).get("Odległośc od Słońca(km): ")))
+    s = abs(int(solar_system.get(dest).odleglosc_od_slonca) - int(solar_system.get(start).odleglosc_od_slonca))
     t = int(s/v)
     print(f"Czas podróży: {t} dni")
 calculator()

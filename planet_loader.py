@@ -17,10 +17,16 @@ def load_planets(csv_file = "solar_system.csv"):
                 })
     except FileNotFoundError:
         print(f"Plik {csv_file} nie znaleziony!")
-    return planets_data
-planets_data = load_planets()
+    return {
+        row["planet"]: 
+        Planeta(row["planet"], 
+                row["masa"], 
+                row["promien"], 
+                row["grawitacja"], 
+                row["odleglosc_od_slonca"]) 
+                for row in planets_data
+                }
 
-planets = {row["planet"]: Planeta(row["planet"], row["masa"], row["promien"], row["grawitacja"], row["odleglosc_od_slonca"]) for row in planets_data}
-
-for key, value in planets.items():
-    print(value.info())
+# planets = load_planets()
+# for key, value in planets.items():
+#     print(value.info())
