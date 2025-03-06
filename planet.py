@@ -1,15 +1,15 @@
 class Planeta:
-    def __init__(self, nazwa, masa, promien, grawitacja, odleglosc_od_slonca):
+    def __init__(self, nazwa, mass, radius, gravitation, distance):
         self.nazwa = nazwa
-        self.masa = masa
-        self.promien = promien
-        self.grawitacja = grawitacja
-        self.odleglosc_od_slonca = odleglosc_od_slonca
+        self.mass = mass
+        self.radius = radius
+        self.gravitation = gravitation
+        self.distance = distance
     def info(self):
         return(f"Planeta: {self.nazwa}\n"
-               f"Masa:{self.masa} kg\n"
-               f"Promien: {self.promien} km\n"
-               f"Grawitacja: {self.grawitacja} m/s²\n"
-               f"Odleglosc od slonca: {self.odleglosc_od_slonca} mln km\n")
+               f"Masa:{self.mass} kg\n"
+               f"Promien: {self.radius} km\n"
+               f"Grawitacja: {self.gravitation} m/s²\n"
+               f"Odleglosc od slonca: {self.distance} mln km\n")
         
 

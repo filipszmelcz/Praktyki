@@ -7,26 +7,25 @@ def load_planets(csv_file = "solar_system.csv"):
     try:
         with open(csv_file, mode="r", encoding="utf-8") as file:
             reader = csv.DictReader(file)
-            for row in reader:
-                planets_data.append({
-                    "planet": row["planet"],
-                    "masa": row["masa"],
-                    "promien": float(row["promien"]),
-                    "grawitacja": float(row["grawitacja"]),
-                    "odleglosc_od_slonca": int(row["odleglosc_od_slonca"])
-                })
+            return {
+            row["planet"]: 
+            Planeta(row["planet"], 
+                row["mass"], 
+                row["radius"], 
+                row["gravitation"], 
+                row["distance"]) 
+                for row in reader
+                }
     except FileNotFoundError:
         print(f"Plik {csv_file} nie znaleziony!")
-    return {
-        row["planet"]: 
-        Planeta(row["planet"], 
-                row["masa"], 
-                row["promien"], 
-                row["grawitacja"], 
-                row["odleglosc_od_slonca"]) 
-                for row in planets_data
-                }
+
 
 # planets = load_planets()
 # for key, value in planets.items():
 #     print(value.info())
+#                 # planets_data.append({
+                #     "planet": row["planet"],
+                #     "mass": row["mass"],
+                #     "radius": float(row["radius"]),
+                #     "gravitation": float(row["gravitation"]),
+                #     "distance": int(row["distance"])
