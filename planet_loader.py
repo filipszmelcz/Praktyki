@@ -2,8 +2,6 @@ import csv
 from planet import Planeta
 
 def load_planets(csv_file = "solar_system.csv"):
-    planets_data = []
-
     try:
         with open(csv_file, mode="r", encoding="utf-8") as file:
             reader = csv.DictReader(file)
