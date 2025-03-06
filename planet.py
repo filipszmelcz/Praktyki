@@ -5,11 +5,11 @@ class Planeta:
         self.radius = radius
         self.gravitation = gravitation
         self.distance = distance
+        
     def info(self):
         return(f"Planeta: {self.nazwa}\n"
                f"Masa:{self.mass} kg\n"
                f"Promien: {self.radius} km\n"
                f"Grawitacja: {self.gravitation} m/s²\n"
                f"Odleglosc od slonca: {self.distance} mln km\n")
-        
-
+    

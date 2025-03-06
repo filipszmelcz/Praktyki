@@ -21,5 +21,5 @@ def planets():
             for key, value in solar_system[planet].items():
                 print(key, value)
         else:
-            print("Nie ma takiej planety w układzie słonecznym")
+            print("Nie ma takiej planety w układzie słonecznym!!!!")
 
