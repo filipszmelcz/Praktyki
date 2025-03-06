@@ -1,20 +1,9 @@
-from planet_loader import load_planets
-solar_system = load_planets()
-
-transport = {
-    "Speed_of_light" : 1079252849,
-    "Voyager 1" : 61200,
-    "Falcon 9" : 39600,
-}
-
-def calculator():
+def calculator(solar_system, transport):
     while True:
         start = input("Podaj planetę startową: ")
         if start in solar_system:
             break
         print("Zła planet!!!!")
-            
-
     while True:
         dest = input("Podaj planetę docelową: ")
         if dest in solar_system:
