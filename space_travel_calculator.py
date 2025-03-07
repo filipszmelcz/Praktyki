@@ -1,4 +1,7 @@
 def calculator(solar_system, transport):
+    trans = None
+    dest = None
+    start = None
     while True:
         start = input("Podaj planetę startową: ")
         if start in solar_system:
@@ -18,7 +21,4 @@ def calculator(solar_system, transport):
     v = transport.get(trans)
     s = abs(int(solar_system.get(dest).distance) - int(solar_system.get(start).distance))
     t = int(s/v)
-    print(f"Czas podróży: {t} dni")
-
-
-
+    print(f"Czas podróży: {t} dni") 
