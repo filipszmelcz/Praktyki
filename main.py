@@ -12,7 +12,6 @@ option = {
     "2": lambda: [print(value.info()) for key, value in solar_system.items()],
 }
 
-
 def menu():
     while True:
         choice = input("0 - planet info, 1 - space travel calculator, 2 - planets info, 3 - end: ")
